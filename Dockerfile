@@ -6,9 +6,8 @@ WORKDIR /blog
 COPY blog .
 
 # install hexo
-RUN npm install hexo-cli -g
-
-RUN npm install
+RUN npm install hexo-cli -g \
+    && npm install
 
 # hexo default port
 EXPOSE 4000
